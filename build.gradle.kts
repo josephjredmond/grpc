@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "codes.ducksource"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -37,6 +37,7 @@ publishing {
     }
     publications {
         register<MavenPublication>("gpr") {
+            group = ""
             from(components["java"])
         }
     }
