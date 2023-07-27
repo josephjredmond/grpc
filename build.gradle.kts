@@ -27,7 +27,7 @@ dependencies {
 publishing {
     repositories {
         maven {
-            name = "gprcJava"
+            name = "grpc"
             url = uri("https://maven.pkg.github.com/josephjredmond/grpc")
             credentials {
                 username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
