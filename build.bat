@@ -1,0 +1,1 @@
+protoc --go_out=./src/main/go --go-grpc_out=./src/main/go --java_out=./src/main/java --java-grpc_out=./src/main/java database.proto  

@@ -1,0 +1,57 @@
+/*
+
+*/
+
+syntax = "proto3";
+
+package service;
+
+/*
+  Imports
+*/
+
+option go_package = "internal/service";
+option java_package = "codes.ducksource.mcn.database";
+
+service DatabaseService {
+  rpc CreatePlayer(CreatePlayerRequest) returns (CreatePlayerResponse);
+  rpc GetPlayer(GetPlayerRequest)       returns (GetPlayerResponse)   ;
+  rpc UpdatePlayer(UpdatePlayerRequest) returns (UpdatePlayerResponse);
+  rpc DeletePlayer(DeletePlayerRequest) returns (DeletePlayerResponse);
+}
+
+
+
+// CreatePlayer
+message CreatePlayerRequest {
+  string mc_uuid = 1;
+}
+
+message CreatePlayerResponse {
+}
+
+// GetPlayer
+message GetPlayerRequest {
+  string mc_uuid = 1;
+}
+
+message GetPlayerResponse {
+  string mc_uuid = 1;
+  int64 join_date = 2;
+}
+
+// UpdatePlayer
+message UpdatePlayerRequest {
+  string mc_uuid = 1;
+}
+
+message UpdatePlayerResponse {
+}
+
+// DeletePlayer
+message DeletePlayerRequest {
+  string mc_uuid = 1;
+}
+
+message DeletePlayerResponse {
+}
